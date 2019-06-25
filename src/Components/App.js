@@ -33,7 +33,7 @@ class App extends Component {
             <div className="container">
               <div className="row">
                 <Search ketNoi={()=>this.doiTrangThai()} hienThiForm={this.state.hienThiForm}/>
-                <TableData/>
+                <TableData dataUserProps={this.state.data}/>
                 <AddUser hienThiForm={this.state.hienThiForm}/>
               </div>
             </div>
