@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       hienThiForm: false,
       data:DataUser,
-      searchText:" "
+      searchText:""
     }
   }
 
@@ -21,10 +21,16 @@ class App extends Component {
     var item ={};
     item.id= "";
     item.name= name;
-    item.name= tel;
+    item.tel= tel;
     item.Permission =Permission;
+    var items = this.state.data;
+
+    items.push(item);
+    this.setState({
+      data:items
+    });
     console.log('ket noi ok ok');
-    console.log(item);
+    console.log(this.state.data);
   }
 
   getTextSearch = (dl) =>{
