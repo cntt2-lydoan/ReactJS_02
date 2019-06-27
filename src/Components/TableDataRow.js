@@ -10,7 +10,7 @@ class TableDataRow extends Component {
         return (
             <tr>
                         <td> {this.props.stt+1} </td>
-                        <td>{this.props.name}</td>
+                        <td>{this.props.userName}</td>
                         <td>{this.props.tel}</td>
                         <td>
                            {this.permissionShow()}

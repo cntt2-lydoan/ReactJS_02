@@ -25,7 +25,8 @@ class Search extends Component {
             <div className="col-12">
                 <div className="form-group">
                     <div className="btn-group">
-                    <input type="text" className="form-control"  onChange={(event) => this.isChange(event)} placeholder="Nhập từ khóa"  />
+                    <input type="text" className="form-control"  onChange={(event) => this.isChange(event)} 
+                    placeholder="Nhập tên cần tìm"/>
                     <div className="btn btn-info" onClick={(dl)=>this.props.checkConnectProps(this.state.tempValue)}> Tìm </div>
                     
                     </div>

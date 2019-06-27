@@ -4,7 +4,7 @@ import TableDataRow from './TableDataRow';
 class TableData extends Component {
 
     mapimgDataUser = () => this.props.dataUserProps.map((value,key) =>(
-        <TableDataRow userName={value.name} key={key} stt={key} tel={value.tel} permission={value.Permission}/>
+        <TableDataRow key={key}  stt={key} userName={value.name} tel={value.tel} permission={value.Permission}/>
     ))
     
     render() {
