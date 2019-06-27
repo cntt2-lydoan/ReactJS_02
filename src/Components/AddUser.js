@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import { arrowFunctionExpression } from '@babel/types';
 
 class AddUser extends Component {
-  
+
+    isChange = (event) =>{
+        const name = event.target.name;
+        const value = event.target.value;
+        console.log(name);
+        console.log(value);
+    }
     kiemTraTrangThai = () =>{
         if(this.props.hienThiForm === true){
             return( 
@@ -10,13 +17,13 @@ class AddUser extends Component {
                         <div className="card-header">Thêm mới User vào hệ thống</div>
                         <div className="card-body text-primary">
                             <div className="form-group">
-                            <input type="text" className="form-control" placeholder="Ten User" />
+                            <input type="text" onChange={(event) => this.isChange(event)} name="name" className="form-control" placeholder="Ten User" />
                             </div>
                             <div className="form-group">
-                            <input type="text" className="form-control" placeholder="Điện thoại" />
+                            <input type="text" onChange={(event) => this.isChange(event)} name="tel" className="form-control" placeholder="Điện thoại" />
                             </div>
                             <div className="form-group">
-                            <select className="custom-select" required>
+                            <select className="custom-select" onChange={(event) => this.isChange(event)} name="Permission" required>
                                 <option value>Chọn quyền mặc định</option>
                                 <option value={1}>Admin</option>
                                 <option value={2}>Modrator</option>
