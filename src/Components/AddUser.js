@@ -30,6 +30,9 @@ class AddUser extends Component {
         if(this.props.hienThiForm === true){
             return( 
             <div className="col-12">
+                <form>
+
+
                 <div className="card border-primary mb-3 mt-2">
                         <div className="card-header">Thêm mới User vào hệ thống</div>
                         <div className="card-body text-primary">
@@ -48,12 +51,13 @@ class AddUser extends Component {
                             </select>
                             </div>
                             <div className="form-group">
-                            <div className="btn btn-block btn-primary" onClick= {(name,tel,Permission) => this.props.add(this.state.name,this.state.tel,this.state.Permission)}>
-                                 Thêm mới </div>
+                                <input type="reset" className="btn btn-block btn-primary" 
+                                onClick= {(name,tel,Permission) => this.props.add(this.state.name,this.state.tel,this.state.Permission)} value="Thêm mới" />
 
                             </div>
                         </div>
                         </div>
+                </form>
             </div>
             )
         }
