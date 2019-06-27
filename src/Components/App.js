@@ -15,6 +15,18 @@ class App extends Component {
       searchText:" "
     }
   }
+
+  getNewUserData = (name,tel,Permission) =>{
+
+    var item ={};
+    item.id= "";
+    item.name= name;
+    item.name= tel;
+    item.Permission =Permission;
+    console.log('ket noi ok ok');
+    console.log(item);
+  }
+
   getTextSearch = (dl) =>{
     this.setState({
       searchText:dl
@@ -50,7 +62,7 @@ class App extends Component {
                  checkConnectProps={(dl)=>this.getTextSearch(dl)}
                  ketNoi={()=>this.doiTrangThai()} hienThiForm={this.state.hienThiForm}/>
                 <TableData  dataUserProps={ketQua}/>
-                <AddUser hienThiForm={this.state.hienThiForm}/>
+                <AddUser add={(name,tel,Permission)=>this.getNewUserData(name,tel,Permission  )} hienThiForm={this.state.hienThiForm}/>
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { arrowFunctionExpression } from '@babel/types';
 
 class AddUser extends Component {
     constructor(props) {
@@ -20,12 +19,12 @@ class AddUser extends Component {
             [name]:value
         });
         //pakage to item
-        var item ={};
-        item.id= this.state.id;
-        item.name= this.state.name;
-        item.tel= this.state.tel;
-        item.Permission= this.state.Permission;
-        console.log(item);
+        // var item ={};
+        // item.id= this.state.id;
+        // item.name= this.state.name;
+        // item.tel= this.state.tel;
+        // item.Permission= this.state.Permission;
+        // console.log(item);
     }
     kiemTraTrangThai = () =>{
         if(this.props.hienThiForm === true){
@@ -49,7 +48,9 @@ class AddUser extends Component {
                             </select>
                             </div>
                             <div className="form-group">
-                            <div className="btn btn-block btn-primary"> Thêm mới </div>
+                            <div className="btn btn-block btn-primary" onClick= {(name,tel,Permission) => this.props.add(this.state.name,this.state.tel,this.state.Permission)}>
+                                 Thêm mới </div>
+
                             </div>
                         </div>
                         </div>
